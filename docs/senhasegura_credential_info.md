@@ -1,10 +1,10 @@
-## senhasegura_credential_info
+# senhasegura_credential_info
 
-This module can be used to get credentials information and secret strings a.k.a passwords
+This module can be used to get credentials information and secret strings a.k.a passwords.
 
----
 
-### Example PlayBooks
+
+## Example PlayBooks
 
 
 Get credential by identifier
@@ -17,6 +17,7 @@ Get credential by identifier
 ```
 
 Get credential by ID
+
 ```yaml
 - name: Get credential with identifier 'ansible
   senhasegura.pam.senhasegura_credential_info:
@@ -24,16 +25,16 @@ Get credential by ID
   register: senhasegura_credential
 ```
 
----
 
-### Available options
+
+## Available options
 
 ```
 options:
     system_url:
         type: str
         description:
-            - senhasegura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
+            - Segura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
     client_id:
         type: str
         description:
@@ -62,4 +63,3 @@ Full module docummentation is available using `ansible-doc` after collection ins
 
     $ ansible-galaxy collection install senhasegura.pam
     $ ansible-doc --type module senhasegura.pam.senhasegura_credential_info
-
