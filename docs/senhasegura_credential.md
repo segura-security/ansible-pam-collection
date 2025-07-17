@@ -1,10 +1,9 @@
-## senhasegura_credential
+# senhasegura_credential
 
-This module can be used to create, update and deactivate credentials in senhasegura's PAM module
+This module can be used to create, update and deactivate credentials in Segura® PAM Core module
 
----
 
-### Example PlayBooks
+## Example PlayBooks
 
 Ensure credential 'ansible' in device 'linux-001'
 
@@ -23,7 +22,7 @@ Ensure credential 'ansible' in device 'linux-001'
     additional_info: 'Credential created by Ansible'
 ```
 
-Domain user CORP\bob creation in senhasegura
+Domain user CORP\bob creation in Segura®
 
 ```yaml
 - name: Ensure domain user 'CORP\bob' in device 'windows-ad'
@@ -49,24 +48,24 @@ Deactivate credential with identifier "domain_user_alice"
     state: absent
     identifier: domain_user_alice
 ```
----
 
-### Available options
 
-```
+## Available options
+
+```yaml
 options:
     system_url:
         type: str
         description:
-            - senhasegura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
+            - Segura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
     client_id:
         type: str
         description:
-            - A2A OAuth2 client_id, SENHASEGURA_CLIENT_ID environment variable may also be used
+            - Segura® A2A OAuth2 client_id, SENHASEGURA_CLIENT_ID environment variable may also be used
     client_secret:
         type: str
         description:
-            - A2A OAuth2 client_secret, SENHASEGURA_CLIENT_SECRET environment variable may also be used
+            - Segura® A2A OAuth2 client_secret, SENHASEGURA_CLIENT_SECRET environment variable may also be used
     state:
         description:
             - Whether the credential should exist or not,
@@ -107,7 +106,7 @@ options:
         type: str
     domain:
         description:
-            - Domain name, It needs to be previously registered in senhasegura
+            - Domain name, It needs to be previously registered in Segura®
         type: str
     tags:
         description:
@@ -133,4 +132,3 @@ Full module docummentation is available using `ansible-doc` after collection ins
 
     $ ansible-galaxy collection install senhasegura.pam
     $ ansible-doc --type module senhasegura.pam.senhasegura_credential
-
