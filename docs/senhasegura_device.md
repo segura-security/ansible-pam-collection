@@ -1,10 +1,10 @@
-## senhasegura_device
+# senhasegura_device
 
-This module can be used to create, update and deactivate devices in senhasegura's PAM module
+This module can be used to create, update and deactivate devices in Segura® PAM Core module
 
----
 
-### Example PlayBooks
+
+## Example PlayBooks
 
 Ensure device with hostname linux-001 and address 172.30.54.10
 
@@ -34,24 +34,23 @@ Deactivate device windows-001
     hostname: windows-001
 ```
 
----
 
-### Available options
+## Available options
 
 ```
 options:
     system_url:
         type: str
         description:
-            - senhasegura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
+            - Segura's environment URL used for authentication, SENHASEGURA_URL environment variable may also be used
     client_id:
         type: str
         description:
-            - A2A OAuth2 client_id, SENHASEGURA_CLIENT_ID environment variable may also be used
+            - Segura A2A OAuth2 client_id, SENHASEGURA_CLIENT_ID environment variable may also be used
     client_secret:
         type: str
         description:
-            - A2A OAuth2 client_secret, SENHASEGURA_CLIENT_SECRET environment variable may also be used
+            - Segura A2A OAuth2 client_secret, SENHASEGURA_CLIENT_SECRET environment variable may also be used
     state:
         description:
             - Whether the device should exist or not,
@@ -106,10 +105,8 @@ options:
         type: boolean
 ```
 
----
 
 Full module docummentation is available using `ansible-doc` after collection install
 
     $ ansible-galaxy collection install senhasegura.pam
     $ ansible-doc --type module senhasegura.pam.senhasegura_device
-
