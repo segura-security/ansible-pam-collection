@@ -5,11 +5,12 @@ readme: README.md
 authors:
   - "Lucas Fraga (@lfraga)"
   - "James Miranda (@jameswpm)"
-description: senhasegura Privileged Access Management Ansible collection
+description: Segura® PAM Core Ansible collection
 license:
 - "MIT"
 tags:
   - senhasegura
+  - segura
   - pam
   - privilege_access_management
-repository: "https://github.com/senhasegura/ansible-pam-collection"
+repository: "https://github.com/segura-security/ansible-pam-collection"
