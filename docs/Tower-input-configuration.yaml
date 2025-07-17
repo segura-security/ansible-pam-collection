@@ -1,14 +1,14 @@
 fields:
   - id: senhasegura_url
     type: string
-    label: senhasegura URL
+    label: Segura® URL
   - id: senhasegura_client_id
     type: string
-    label: Client ID
+    label: Segura® A2A Client ID
     secret: true
   - id: senhasegura_client_secret
     type: string
-    label: Client Secret
+    label: Segura® A2A Client Secret
     secret: true
 required:
   - senhasegura_url
